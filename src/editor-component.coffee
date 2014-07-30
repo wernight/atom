@@ -521,7 +521,7 @@ EditorComponent = React.createClass
     @subscribe atom.config.observe 'editor.useHardwareAcceleration', @setUseHardwareAcceleration
 
   onFocus: ->
-    @refs.input.focus()
+    @refs.input.focus() if @isMounted()
 
   onTextInput: (event) ->
     return unless @isInputEnabled()
