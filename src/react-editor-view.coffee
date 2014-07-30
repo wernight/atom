@@ -250,9 +250,6 @@ class EditorView extends View
   pageUp: ->
     @editor.pageUp()
 
-  getModel: ->
-    @editor
-
   # Public: Retrieves the number of the row that is visible and currently at the
   # top of the editor.
   #
