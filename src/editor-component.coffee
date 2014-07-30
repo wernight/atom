@@ -536,8 +536,7 @@ EditorComponent = React.createClass
     selectedLength = inputNode.selectionEnd - inputNode.selectionStart
     editor.selectLeft() if selectedLength is 1
 
-    editor.insertText(event.data)
-    inputNode.value = event.data
+    inputNode.value = event.data if editor.insertText(event.data)
 
     # If we prevent the insertion of a space character, then the browser
     # interprets the spacebar keypress as a page-down command.
