@@ -109,14 +109,15 @@ class EditorView extends View
         lines.addClass(klass)
         lines.length > 0
 
-  getEditor: ->
-    deprecate("Use EditorView::getModel instead")
-    @editor
 
   # Public: Get the underlying editor model for this view.
   #
   # Returns an {Editor}.
   getModel: -> @editor
+
+  getEditor: ->
+    deprecate('Use EditorView::getModel instead')
+    @editor
 
   Object.defineProperty @::, 'lineHeight', get: -> @editor.getLineHeightInPixels()
   Object.defineProperty @::, 'charWidth', get: -> @editor.getDefaultCharWidth()
