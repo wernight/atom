@@ -115,9 +115,7 @@ class EditorView extends View
   # Returns an {Editor}.
   getModel: -> @editor
 
-  getEditor: ->
-    deprecate('Use EditorView::getModel instead')
-    @editor
+  getEditor: -> @editor
 
   Object.defineProperty @::, 'lineHeight', get: -> @editor.getLineHeightInPixels()
   Object.defineProperty @::, 'charWidth', get: -> @editor.getDefaultCharWidth()
